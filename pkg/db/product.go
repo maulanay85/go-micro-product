@@ -14,7 +14,8 @@ type Product struct {
 	CreatedAt          time.Time          `bson:"createdAt"`
 	UpdatedAt          time.Time          `bson:"updatedAt"`
 	IsDeleted          bool               `bson:"isDeleted"`
-	Category           Category           `bson:"category" binding:"required"`
+	CategoryName       string             `bson:"categoryName" binding:"required"`
+	CategoryId         int32              `bson:"categoryId" binding:"required"`
 	MerchantId         int32              `bson:"merchantId" binding:"required"`
 	MerchantName       string             `bson:"merchantName" binding:"required"`
 	HasSell            int64              `bson:"hasSell"`

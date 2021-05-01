@@ -33,3 +33,9 @@ func Filter(query map[string]interface{}) bson.M {
 	}
 	return result
 }
+
+type Paging struct {
+	Skip   int32
+	Limit  int32
+	Filter map[string]interface{}
+}
