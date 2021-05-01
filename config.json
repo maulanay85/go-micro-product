@@ -1,0 +1,8 @@
+{
+  "server": {
+    "address": ":3000"
+  },
+  "database" : {
+    "url": "mongodb://root:rqdq8IphwFwUmFJv@95.111.232.245:27017"
+  }
+}
