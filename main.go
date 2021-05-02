@@ -18,6 +18,8 @@ func main() {
 		})
 	})
 
+	folderImage := config.GetString("path.product_image")
+
 	v1 := r.Group("/v1")
 	{
 		category := v1.Group("category")
@@ -26,6 +28,10 @@ func main() {
 		category.GET("/:id", api.FindById)
 		category.PUT("/:id", api.UpdateById)
 		category.DELETE("/:id", api.DeleteById)
+
+		product := v1.Group("product")
+		product.POST("/image", api.UploadProductImage)
+		product.Static("/image", folderImage+"/image/product/")
 	}
 
 	r.Run(config.GetString("server.address"))

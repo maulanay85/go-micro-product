@@ -4,5 +4,8 @@
   },
   "database" : {
     "url": "mongodb://root:rqdq8IphwFwUmFJv@95.111.232.245:27017"
+  },
+  "path": {
+    "product_image": "path_to_folder"
   }
 }
